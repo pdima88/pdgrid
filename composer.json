@@ -1,0 +1,31 @@
+{
+    "name": "pdima88/pdgrid",
+    "description": "PHP Data Grid widget using Zend Db v1",
+    "type": "library",
+    "require": {
+        "frontpack/composer-assets-plugin": "^0.9.4",
+        "nette/utils": "^2.5",
+        "zf1/zend-db": "~1.12",
+        "pdima88/phpassets": "^1.0",
+        "pdima88/twbshelper": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Puchkin Dmitriy",
+            "email": "pdima88@mail.ru"
+        }
+    ],
+    "extra": {
+        "assets-files": [
+            "css",
+            "js",
+            "img"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "pdgrid\\": "/"
+        }
+    } 
+}

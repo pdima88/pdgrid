@@ -1,0 +1,90 @@
+.pdgrid_filter {
+    margin-left: 5px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    visibility: hidden;
+    color: #888;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+.pdgrid th:hover .pdgrid_filter {
+    visibility: visible;
+    background-color: #EEE;
+}
+
+.pdgrid_filter.active {
+    visibility: visible;
+    color: #0167BB;
+    background-color: transparent;
+}
+
+.pdgrid .filters {
+    background: #DDD;
+}
+.pdgrid .filters th {
+    vertical-align: middle;
+}
+.pdgrid .filters .form-control {
+    font-weight: normal;
+}
+
+.pdgrid-action-btn {
+    visibility: hidden;
+}
+
+.pdgrid tbody tr:hover {
+    background-color: #d8ffd0 !important;
+}
+
+.pdgrid tr:hover .pdgrid-action-btn {
+    visibility: visible;
+}
+
+.pdgrid tr.group {
+    background-color: #DDD !important;
+    border-bottom: solid 2px #CCC;
+}
+
+.pdgrid tr.mark-delete {
+    background-color: #FAA !important;
+}
+
+.pdgrid-paging-select-page-form {
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding: 2px 5px;
+    margin-left: -1px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pdgrid-paging-select-page-form .form-control {
+    height: 25px;
+    padding: 0;
+    width: 55px;
+    text-align: center;
+}
+.pdgrid-paging-select-page-form .input-group-btn {
+    display: inline;
+}
+.pdgrid-paging-select-page-form button {
+    height: 25px;
+    line-height: 15px;
+    width: 25px;
+    padding-left: 7px;
+}
+
+.pdgrid thead {
+    position: sticky;
+    top: -10px;
+    background: #FFF;
+    z-index: 10;
+}
+
+.pdgrid .filter-active {
+    background-color: #00a7f2;
+}
