@@ -101,6 +101,13 @@ class Grid {
         $this->_rownum = $this->_pg->first ?: 1;
     }
 
+    function __get($name) {
+        if ($name == 'id') {
+            return $this->_id;
+        }
+        throw new \Exception('Property '.$name.' not defined!');
+    }
+
     protected $_deleteBtnTpl = null;
     protected $_editBtnTpl = null;
     protected $_actionsTpl = null;
