@@ -300,9 +300,9 @@
                 var $grid = this.$gridById(gridId);
                 $grid.attr('data-current-url', url['url']);
                 $grid.attr('data-current-url-ajax', url['ajax']);
-                var $addBtn = $('.pdgrid-'+gridId+'-addbtn');
-                if ($addBtn.length > 0) {
-                    $addBtn.attr('href', $addBtn.attr('data-addurl').replace('{returnUrl}', encodeURIComponent(url['url'])));
+                var $updReturnUrl = $('.pdgrid-'+gridId+'-returnUrl');
+                if ($updReturnUrl.length > 0) {
+                    $updReturnUrl.attr('href', $updReturnUrl.attr('data-url').replace('{returnUrl}', encodeURIComponent(url['url'])));
                 }
                 if ($grid.attr('data-ajax-set-url')) {
                     if (window.history.replaceState !== undefined) {
