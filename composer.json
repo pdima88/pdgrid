@@ -17,6 +17,7 @@
         }
     ],
     "extra": {
+        "assets-target": "pdgrid",
         "assets-files": [
             "css",
             "js",

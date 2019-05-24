@@ -1,9 +1,6 @@
 (function($){
 
-    if ($.pdgrid === undefined) $.pdgrid = {};
-    $.extend($.pdgrid, {
-        grid: {
-
+    if ($.pdgrid === undefined) $.pdgrid = {
             getUrlParameter: function(url, sParam) {
                 var sPageURL = decodeURIComponent(url),
                     sURLVariables = sPageURL.split('&'),
@@ -58,7 +55,8 @@
 
             getGridId: function($grid) {
                 var id = $grid.attr('id');
-                if (id.indexOf('pdgrid_') == 0) id = id.slice(9);
+                var idPrefix = 'pdgrid_';
+                if (id.indexOf(idPrefix) == 0) id = id.slice(idPrefix.length);
                 return id;
             },
 
@@ -557,8 +555,7 @@
             }
 
 
-        }
-    });
+    };
 
     $(function() {
         $(document).on("click", ".pdgrid .filters .form-control-clear", function() {
