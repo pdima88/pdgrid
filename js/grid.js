@@ -31,6 +31,7 @@
             appendUrlParams: function(url, params) {
                 var sep = '&';
                 if (url.indexOf('?') == -1) sep = '?';
+                if (url.indexOf('?') == url.length-1) sep = '';
                 for (paramName in params) {
                     if (params[paramName] !== undefined /*&& params[paramName] !== ''*/) {
                         url += sep + paramName + '=' + encodeURIComponent(params[paramName]);
