@@ -303,7 +303,9 @@
                 $grid.attr('data-current-url-ajax', url['ajax']);
                 var $updReturnUrl = $('.pdgrid-'+gridId+'-returnUrl');
                 if ($updReturnUrl.length > 0) {
-                    $updReturnUrl.attr('href', $updReturnUrl.attr('data-url').replace('{returnUrl}', encodeURIComponent(url['url'])));
+                    $updReturnUrl.each(function() {
+                        $(this).attr('href', $(this).attr('data-url').replace('{returnUrl}', encodeURIComponent(url['url'])));
+                    });
                 }
                 if ($grid.attr('data-ajax-set-url')) {
                     if (window.history.replaceState !== undefined) {
