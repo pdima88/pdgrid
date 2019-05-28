@@ -1005,6 +1005,7 @@ class Grid {
 
     static function formatDateTime($date, $timeShort = true)
     {
+        if ($date == '0000-00-00 00:00:00') return '';
         if (!is_numeric($date)) $date = strtotime($date);
         return self::formatDate($date) .' '. date($timeShort ? 'H:i': 'H:i:s', $date);
     }

@@ -177,10 +177,10 @@ class DateRange extends Filter {
 
             if ($this->_value == 'NULL') {
                 return $db->quoteIdentifier($this->_name) .
-                ' IS NULL';
+                ' IS NULL OR '.$db->quoteIdentifier($this->_name).' = \'0000-00-00 00:00:00\'';
             } elseif ($this->_value == 'NOT NULL') {
                 return $db->quoteIdentifier($this->_name) .
-                ' IS NOT NULL';
+                ' IS NOT NULL AND '.$db->quoteIdentifier($this->_name).' <> \'0000-00-00 00:00:00\'';
             } else {
                 list($startDate, $endDate) = $this->getRange();
 
