@@ -50,6 +50,7 @@ class Csv extends Export {
                     } else {
                         $cell = $value;
                     }
+                    $cell = str_replace('.',',',$cell);
                 } else {
                     if (isset($value) && $value !== '') {
                         $cell = self::quoteCsv($value);

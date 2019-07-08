@@ -996,6 +996,7 @@ class Grid {
 
     static function formatDate($date = null)
     {
+        if ($date == '0000-00-00') return '';
         if (!isset($date)) $date = time();
         if (!is_numeric($date)) $date = strtotime($date);
         $dt = getdate($date);
