@@ -809,14 +809,16 @@ class Grid {
             $page = $this->_pg->pageCount;
         }
         if ($class !== '') $li->setClass($class);
+        $li->addClass('page-item');
 
         if ($this->_pg->page != $page) {
             $a = Html::el('a')
+                    ->addClass('page-link')
                     ->addHtml($label ?: $page)
                     ->href(str_replace(urlencode('{page}'), $page, $url))
                     ->onclick($onclick ?: "return $.pdgrid.gotoPage('{$this->_id}', '{$page}')");
         } else {
-            $a = Html::el('a')->addHtml($label ?: $page)->href('#');
+            $a = Html::el('a')->addClass('page-link')->addHtml($label ?: $page)->href('#');
         }
 
         return strval($li->addHtml($a));
